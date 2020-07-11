@@ -16,6 +16,7 @@ var timeBlocks = [
   { tm: 17, tmMid: "pm" },
 ];
 var date = new Date();
+var index = 1;
 // get and display current date
 
 var today =
@@ -32,18 +33,20 @@ var hours = new Date().getHours();
 
 // change time blocks colors depending on current time
 // Display the calendar with timeframe 9am to 5pm
+
+//  CALENDAR DIPLAY ========================================
 var timeBlock = $("<div class=time-block>");
 calendar.append(timeBlock);
 timeBlocks.forEach((hr) => {
-  console.log(hr);
+  //console.log(hr);
   var row = $("<div class= row>");
   timeBlock.append(row);
+  //  code adding hour block ========================================
   var hour = $("<div class= hour>");
   hour.addClass("col-2");
-  hour.attr("data-mid", hr.tmMid);
-
   row.append(hour);
-  var textBlock = $("<div>");
+  // code adding code to text area
+  var textBlock = $("<input type='textarea'>");
   var blockHour = parseInt(hr.tm);
 
   //console.log(blockHour);
@@ -56,17 +59,22 @@ timeBlocks.forEach((hr) => {
   }
   var fHour = (hr.tm + 24) % 24;
   if (fHour == 0) {
-      //At 00 hours we need to show 12 am
-      fHour = 12;
-    } else if (fHour > 12) {
-      fHour = fHour % 12;
-      
-    }
-  console.log(hours);
-  hour.text(fHour+hr.tmMid);
-  textBlock.addClass("col-8");
-  textBlock.text("dcvqbwehcbqwiuekjfbqiwehcvbqyewlhjcvqwejhcvwe cweqhv");
+    //At 00 hours we need to show 12 am
+    fHour = 12;
+  } else if (fHour > 12) {
+    fHour = fHour % 12;
+  }
+  //console.log(hours);
+  hour.text(fHour + hr.tmMid);
+    textBlock.addClass("col-8");
+    textBlock.attr("data-index", index);
+    textBlock.text("");
+    //var textArea = $('<input type="textarea">')
+    //textBlock.append(textArea);
+    
   row.append(textBlock);
+  //save button code===========
+    var saveBtn = $("<button>");
 });
 // get the users plans and save them
 // make sure the plans show up next time user open the app
