@@ -66,15 +66,17 @@ timeBlocks.forEach((hr) => {
   }
   //console.log(hours);
   hour.text(fHour + hr.tmMid);
-    textBlock.addClass("col-8");
-    textBlock.attr("data-index", index);
-    textBlock.text("");
-    //var textArea = $('<input type="textarea">')
-    //textBlock.append(textArea);
-    
+  textBlock.addClass("col-8");
+  textBlock.attr("data-index", index);
+  textBlock.text("");
   row.append(textBlock);
   //save button code===========
-    var saveBtn = $("<button>");
+    var saveBtn = $("<button class=saveBtn>");
+    saveBtn.attr("data-index", index);
+    saveBtn.addClass("clo-2");
+    saveBtn.append($("<img src='https://www.iconsdb.com/icons/preview/green/save-xxl.png'>"))
+    index++;
+    row.append(saveBtn);
 });
 // get the users plans and save them
 // make sure the plans show up next time user open the app

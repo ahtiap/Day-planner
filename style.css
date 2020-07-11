@@ -67,6 +67,9 @@ input{
   background-color: #06AED5;
   color: white;
 }
+.saveBtn img{
+    width: 20px;
+}
 
 .saveBtn i:hover {
   font-size: 20px;
