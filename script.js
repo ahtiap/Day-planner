@@ -19,16 +19,13 @@ $(document).ready(function () {
     { tm: 16, tmMid: "pm" },
     { tm: 17, tmMid: "pm" },
   ];
-  var date = new Date();
+ 
   var index = 1;
-  var plans = JSON.parse(localStorage.getItem("plans")) || [];
-
   // get and display current date
-  var date = moment([2010, 1, 14, 15, 25, 50, 125]);
-  date.format("dddd, MMMM Do YYYY"); 
-  
-  
-  todaysDate.text(date);
+    // used moment.js to format the date
+  date = moment(new Date(), 'YYYY-MM-DD')
+  date.format('dddd') 
+  todaysDate.text(date.format('dddd, MMMM DD.') );
 
   // get the current time
   var hours = new Date().getHours();
