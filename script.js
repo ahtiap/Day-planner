@@ -22,7 +22,8 @@ $(document).ready(function () {
  
   var index = 1;
   // get and display current date
-    // used moment.js to format the date
+    // used moment.js to format the datetoutoumy1961
+    
   date = moment(new Date(), 'YYYY-MM-DD')
   date.format('dddd') 
   todaysDate.text(date.format('dddd, MMMM DD.') );

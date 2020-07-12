@@ -28,6 +28,7 @@ textarea{
 .time-block{
   text-align: center;
   border-radius: 15px;
+  padding-bottom: 25px;
 }
 
 .row {
@@ -86,6 +87,7 @@ html {
     margin-bottom: 60px; /* Margin bottom by footer height */
   }
   .footer {
+      
     position: absolute;
     bottom: 0;
     width: 100%;
