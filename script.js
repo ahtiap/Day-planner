@@ -23,7 +23,7 @@ $(document).ready(function () {
   var index = 1;
   // get and display current date
     // used moment.js to format the datetoutoumy1961
-    
+
   date = moment(new Date(), 'YYYY-MM-DD')
   date.format('dddd') 
   todaysDate.text(date.format('dddd, MMMM DD.') );
@@ -78,7 +78,7 @@ $(document).ready(function () {
     saveBtn.attr("data-index", index);
     saveBtn.addClass("clo-3");
     saveBtn.append(
-      $("<img src='https://www.iconsdb.com/icons/preview/green/save-xxl.png'>")
+      $("<img src='images/save-xxl.png'>")
     );
     index++;
     // saveBtn.text("save");
